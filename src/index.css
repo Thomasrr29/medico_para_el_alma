@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cal+Sans&family=Courgette&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-courgette-cursive: "Courgette", cursive;
+    --font-acme-animated: "Acme", sans-serif;
+    --font-dancing-cursive: "Dancing Script", cursive;
+    --font-outfit-elegant: "Outfit", sans-serif;
+    --color-blueprimary: #0055ff;
+    --color-orangeprimary: #ff5500;
+
+
+    --animate-right-move: right-move 40s linear infinite;
+
+    @keyframes right-move {
+        0% {
+            transform: translateX(-50%); 
+        }
+        100% {
+            transform: translateX(0%); 
+        }
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(5%)
+        }
+
+        100% {
+            transform: translateX(-25%); 
+        }
+
+    }
+
+    @keyframes scroll-right {
+
+        0% {
+            transform: translateX(-5%)
+        }
+
+        100% {
+
+            transform: translateX(25%); 
+
+        }
+
+    }
+
+    @keyframes zoom-object {
+
+        0% {
+            transform: scale(0.8)
+        } 
+
+        100% {
+            transform: scale(1.4)
+        }
+
+    }
+
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-color: orange rgb(226, 226, 226);
+}
+
+.zoom-object {
+    animation: zoom-object linear both;
+    animation-timeline: view();
+    animation-range: 0 2000px;
+}
+
+.scroll-left {
+    animation: scroll-left linear both;
+    animation-timeline: view();
+    animation-range: 0px 3000px;
+}
+
+.scroll-right {
+    animation: scroll-right linear both;
+    animation-timeline: view();
+    animation-range: 0px 3000px;
+}
+
+
