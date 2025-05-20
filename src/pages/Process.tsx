@@ -1,4 +1,3 @@
-import ItemsComponent from "../components/home/itemsComponent"
 import PhraseComponent from "../components/PhraseComponent"
 import HeroComponentProcess from "../components/process/heroComponent"
 import QuestionsComponent from "../components/process/questionsComponent"
