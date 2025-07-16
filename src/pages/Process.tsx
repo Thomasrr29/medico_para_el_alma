@@ -1,10 +1,11 @@
-import PhraseComponent from "../components/PhraseComponent"
 import HeroComponentProcess from "../components/process/heroComponent"
-import QuestionsComponent from "../components/process/questionsComponent"
-import TestimonialsComponent from "../components/process/Testimonials"
-import TopicsComponent from "../components/process/TopicsComponent"
-import TutorsComponent from "../components/process/TutorsComponent"
+import QuestionsComponent from "../components/process/Questions"
+import TopicsComponent from "../components/process/Topics"
+import TutorsComponent from "../components/process/Tutors"
 import { TestimonialsCarousel } from "../types/Testimonials"
+import VerticalTimeline from "../components/process/Timeline"
+import TestimonialsComponent from "../components/process/Testimonials"
+import PhoneIconComponent from "../components/ui/phoneIcon"
 
 const ProcessPage = () => {
 
@@ -76,10 +77,7 @@ const ProcessPage = () => {
         <>
             <HeroComponentProcess/>
             <TopicsComponent/>
-            <PhraseComponent 
-            phrase="En fin, vivan en armonía los unos con los otros; compartan penas y alegrías, 
-            practiquen el amor fraternal, sean compasivos y humildes."
-            background_color="gray-800"/>
+            <VerticalTimeline/>
             <TestimonialsComponent testimonials={testimonials_data}/>
             <TutorsComponent/>
             <QuestionsComponent/>

@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import FooterComponent from "./components/FooterComponent"
+import FooterComponent from "./components/ui/FooterComponent"
 import ProcessPage from "./pages/Process"
 import HomePage from "./pages/Home"
-import ContactPage from "./pages/Contact"
-import HeaderComponent from "./components/HeaderComponent"
+import HeaderComponent from "./components/ui/HeaderComponent"
+import Community from "./pages/Community"
 
 function App() {
 
@@ -13,8 +13,8 @@ function App() {
       <HeaderComponent/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/process" element={<ProcessPage/>}/>
-          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/proceso" element={<ProcessPage/>}/>
+          <Route path="/comunidad" element={<Community/>}/>
         </Routes>
       <FooterComponent/>
       </Router>

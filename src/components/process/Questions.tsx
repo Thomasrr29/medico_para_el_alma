@@ -75,14 +75,15 @@ const QuestionsComponent = () => {
       ]
 
     return ( 
-        <section className="bg-orange-600 py-20">
+        <section className="bg-dorado-clasico py-20">
             <div className="flow-root w-3/4 lg:w-1/2 mx-auto shadow-sm p-8 rounded-xl mb-10 bg-white">
                 <h2 className="text-center text-2xl md:text-4xl font-semibold w-1/2 mx-auto mb-20 text-neutral-900">Preguntas y Respuestas</h2>
                 <div className="w-full my-4 flex flex-col divide-y divide-gray-200">
                         {
                             questionsComponent.map((question) => (
 
-                                <details className="group py-4 [&_summary::-webkit-details-marker]:hidden" id={question.id} >
+                                <details className="group py-4 [&_summary::-webkit-details-marker]:hidden"
+                                key={question.id}>
                                         <summary className="flex items-center justify-between gap-1.5 text-gray-900">
                                         <h2 className="text-lg font-medium text-black">{question.question}</h2>
 

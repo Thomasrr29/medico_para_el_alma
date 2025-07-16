@@ -13,8 +13,20 @@
     --color-blueprimary: #0055ff;
     --color-orangeprimary: #ff5500;
 
+    --color-azul-claro: #4EA8E0;
+    --color-dorado-clasico: #D4AF37;
+    --color-marron-intenso: #994F0F;
+    --color-beige-suave: #ffefce;
+
+    /* Colores Secundarios */
+    --color-verde-esperanza: #228B22;
+    --color-azul-mariano: #4169E1;
+    --color-purpura-real: #663399;
+    --color-gris-ceniza: #708090;
+
 
     --animate-right-move: right-move 40s linear infinite;
+    --animate-shadow-box: shadow-box 8s ease-in-out infinite;
 
     @keyframes right-move {
         0% {
@@ -25,41 +37,22 @@
         }
     }
 
-    @keyframes scroll-left {
+
+    @keyframes shadow-box{
         0% {
-            transform: translateX(5%)
+            box-shadow: 0px 0px 5px 5px #D4AF37;
+            transform: scale(1.0)
+        }
+
+        50% {
+            box-shadow: 0px 0px 40px 15px #D4AF37;
+            transform: scale(1.1)
         }
 
         100% {
-            transform: translateX(-25%); 
+            box-shadow: 0px 0px 5px 5px #D4AF37;
+            transform: scale(1.0)
         }
-
-    }
-
-    @keyframes scroll-right {
-
-        0% {
-            transform: translateX(-5%)
-        }
-
-        100% {
-
-            transform: translateX(25%); 
-
-        }
-
-    }
-
-    @keyframes zoom-object {
-
-        0% {
-            transform: scale(0.8)
-        } 
-
-        100% {
-            transform: scale(1.4)
-        }
-
     }
 
 }
@@ -86,6 +79,27 @@ body {
     animation: scroll-right linear both;
     animation-timeline: view();
     animation-range: 0px 3000px;
+}
+
+
+.timeline::after {
+
+    content: "";
+    position: absolute; 
+    top: 10px;
+    stroke-width: 100px;
+    color: black; 
+    background-color: black;
+        
+}
+
+.scroll-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 

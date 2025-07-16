@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react"
-import CounterComponentCommunity from "./CounterComponent"
+import CounterComponentCommunity from "./Counter"
 
 const CommunityComponent = () => {
 
@@ -30,7 +30,8 @@ const CommunityComponent = () => {
     return ( 
         <section 
         ref={sectionRef}
-        className="grid grid-cols-2 xl:grid-cols-3 w-3/4 mx-auto py-60 gap-6">
+        className="flex flex-wrap w-3/4 
+        mx-auto py-60 gap-x-20 gap-y-10 justify-center">
             <CounterComponentCommunity 
             name="Integrantes" 
             image="https://cdn-icons-png.flaticon.com/128/3092/3092920.png"

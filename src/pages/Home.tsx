@@ -3,14 +3,16 @@ import { ItemsCarousel } from "../types/ItemsCarousel"
 import {GiLion, GiBrain, GiProgression, GiSprout, GiTeacher, GiOpenBook} from "react-icons/gi"
 import {FaHeart, FaUsers, FaLandmark } from "react-icons/fa"
 import { MdSelfImprovement } from "react-icons/md"
+import AutorityComponent from "../components/home/autority"
+import PhraseComponent from "../components/ui/PhraseComponent"
+import PhoneIconComponent from "../components/ui/phoneIcon"
 
-const CallToActionComponent = lazy(() => import("../components/home/CallToActionComponent"))
-const CommunityComponent = lazy(() => import("../components/home/CommunityComponent"))
-const HeroComponent = lazy(() => import("../components/home/HeroComponent"))
-const ItemsComponent = lazy(() => import("../components/home/itemsComponent"))
-const PillarsComponent = lazy(() => import("../components/home/PillarsComponent"))
-const SectionsComponent = lazy(() => import("../components/home/SectionsComponent"))
-const LoaderComponent = lazy(() => import("../components/LoaderComponent"))
+const CallToActionComponent = lazy(() => import("../components/home/CallToAction"))
+const CommunityComponent = lazy(() => import("../components/home/statsSection"))
+const HeroComponent = lazy(() => import("../components/home/Hero"))
+const ItemsComponent = lazy(() => import("../components/home/Ethos"))
+const PillarsComponent = lazy(() => import("../components/home/Pillars"))
+const LoaderComponent = lazy(() => import("../components/ui/LoaderComponent"))
 
 const HomePage = () => {
 
@@ -39,10 +41,11 @@ const HomePage = () => {
     return (
 
         <Suspense fallback={<LoaderComponent color="blue-600" texts={texts_loader}/>}>
-                <HeroComponent urlImage="https://img.freepik.com/premium-vector/jesus-cartoon-vector_76844-3331.jpg" title="El camino de acercamiento a Dios" subtitle="Sana tu interior y acercate a Dios" button="Conocer más"/>
-                <PillarsComponent/>
+                <HeroComponent/>
                 <ItemsComponent itemsCarousel={items_first}/>
-                <SectionsComponent/>
+                <AutorityComponent/>
+                <PillarsComponent/>
+                <PhraseComponent phrase="Dios es nuestra guia, nuestro amor y bendición" background_color="marron-intenso"/>
                 <CommunityComponent/>
                 <CallToActionComponent/>
         </Suspense>

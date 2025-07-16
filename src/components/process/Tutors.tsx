@@ -3,7 +3,7 @@ const TutorsComponent = () => {
     return (
         <section className="flex flex-col justify-center items-center gap-y-20 bg-white h-[1500px] md:h-screen">
             <div className="my-2">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-neutral-900 ">Nuestros formadores</h1>
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-dorado-clasico ">Nuestros formadores</h1>
             </div>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 mx-4">
                 <a href="#" className="group relative block">
@@ -14,7 +14,7 @@ const TutorsComponent = () => {
                     />
 
                     <div className="relative p-4 sm:p-6 lg:p-8">
-                        <p className="text-sm font-medium tracking-widest text-orange-500 uppercase">Developer</p>
+                        <p className="text-sm font-medium tracking-widest text-dorado-clasico uppercase">Developer</p>
 
                         <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
 
@@ -38,7 +38,7 @@ const TutorsComponent = () => {
                     />
 
                     <div className="relative p-4 sm:p-6 lg:p-8">
-                        <p className="text-sm font-medium tracking-widest text-orange-500 uppercase">Developer</p>
+                        <p className="text-sm font-medium tracking-widest text-dorado-clasico  uppercase">Developer</p>
 
                         <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
 
@@ -62,7 +62,7 @@ const TutorsComponent = () => {
                     />
 
                     <div className="relative p-4 sm:p-6 lg:p-8">
-                        <p className="text-sm font-medium tracking-widest text-orange-500 uppercase">Developer</p>
+                        <p className="text-sm font-medium tracking-widest text-dorado-clasico uppercase">Developer</p>
 
                         <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
 
