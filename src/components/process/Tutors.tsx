@@ -1,10 +1,8 @@
 const TutorsComponent = () => {
 
     return (
-        <section className="flex flex-col justify-center items-center gap-y-20 bg-white h-[1500px] md:h-screen">
-            <div className="my-2">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-dorado-clasico ">Nuestros formadores</h1>
-            </div>
+        <section className="flex flex-col justify-center items-center gap-y-20 bg-white py-20">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dorado-clasico">Nuestros formadores</h1>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 mx-4">
                 <a href="#" className="group relative block">
                     <img

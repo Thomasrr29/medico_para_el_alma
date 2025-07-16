@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import FooterComponent from "./components/ui/FooterComponent"
+import HeaderComponent from "./components/ui/HeaderComponent"
 import ProcessPage from "./pages/Process"
 import HomePage from "./pages/Home"
-import HeaderComponent from "./components/ui/HeaderComponent"
 import Community from "./pages/Community"
 
 function App() {
 
   return (
-    <>
-      <Router>
+    <Router>
       <HeaderComponent/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
@@ -17,8 +16,7 @@ function App() {
           <Route path="/comunidad" element={<Community/>}/>
         </Routes>
       <FooterComponent/>
-      </Router>
-    </>
+    </Router>
   )
 }
 

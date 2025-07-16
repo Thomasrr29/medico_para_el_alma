@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import RenderButtons from "./renderButtons";
 
 const FeedCommunity = () => {
 
   const [activeIndex, setActiveIndex] = useState<number>(1)
   const containerRef = useRef<HTMLDivElement>(null)
+  const [numMoves, setNumMoves ]= useState<number>(0)
+
+
 
   const posts = [
     {
@@ -64,25 +68,24 @@ const FeedCommunity = () => {
     },
   ]
 
-
-  const change = (e: React.MouseEvent<HTMLButtonElement>) => {
-    
-    const index = parseInt(e.currentTarget.name)
-    setActiveIndex(index)
-
-  }
-
   useEffect(() => {
-    const valueScroll = (activeIndex - 1) * 600 
+
     
+
     if(containerRef.current){
+
+      const valueScroll = (activeIndex - 1) * (containerRef.current.clientWidth)
+
       containerRef.current.scrollLeft = valueScroll
+      setNumMoves(Math.ceil((posts.length * 350) / containerRef.current?.clientWidth))
+
     }
 
   }, [activeIndex])
 
 
   useEffect(() => {
+
     const timeout = setTimeout(() => {
       if(activeIndex < 3){
         setActiveIndex((prev) => prev + 1)
@@ -91,50 +94,49 @@ const FeedCommunity = () => {
       }
     }, 5000)
     return () => clearTimeout(timeout)
+
   }, [activeIndex])
 
-  
+  const handleChange = (target: string) => {
+    const num = parseInt(target)
+    setActiveIndex(num)
+  }
 
   
   return (
-    <div className="flex flex-col w-4/5 m-auto mt-20 py-10">
-      <main 
-      ref={containerRef}
-      className="flex gap-x-6 mask-linear-[-180deg,black,gray_33%,rgba(0,0,0,200)_66%,transparent_100%] 
-      py-20 place-items-center overflow-hidden scroll-smooth">
-        {
-          posts.map((post) => (
-            <div className="flex flex-col shrink-0 rounded-xl shadow-lg 
-            p-10 gap-y-6 bg-beige-suave w-[350px]" 
-            key={post.id}>
-              <img 
-              className="rounded-2xl"
-              src={post.imagen} alt="" />
-              <div>
-                <h3 className="font-bold text-2xl">{post.titulo}</h3>
-                <span className="text-gray-500 font-extralight">{post.fecha}</span>
-                <p>{post.descripcion}</p>
+
+    <div className="bg-dorado-clasico w-full py-20">
+      <div className="flex flex-col md:w-4/5 mx-auto">
+        <h3 className="mb-10 text-beige-suave font-bold text-5xl">EVENTOS</h3>
+        <main 
+        ref={containerRef}
+        className="flex gap-x-6 mask-linear-[180deg,black,gray_33%,rgba(0,0,0,200)_66%,transparent_100%] 
+        pb-20 place-items-center overflow-x-scroll scroll-smooth">
+          {
+            posts.map((post) => (
+              <div 
+              className="post flex flex-col shrink-0 rounded-xl shadow-lg 
+              p-10 gap-y-6 bg-beige-suave w-[350px]" 
+              key={post.id}>
+                <img 
+                className="rounded-2xl"
+                src={post.imagen} alt="" />
+                <div>
+                  <h3 className="font-bold text-2xl">{post.titulo}</h3>
+                  <span className="text-gray-500 font-extralight">{post.fecha}</span>
+                  <p>{post.descripcion}</p>
+                </div>
               </div>
-            </div>
-          ))
-        }  
-      </main> 
-      <div className="flex justify-center items-center gap-4">
-        <button
-        onClick={change} 
-        name="1"
-        className={`${activeIndex == 1 && "bg-marron-intenso"} 
-        w-4 h-4 bg-beige-suave rounded-full cursor-pointer`}></button>
-        <button
-        onClick={change} 
-        name="2"
-        className={`${activeIndex == 2 && "bg-marron-intenso"} w-4 h-4 bg-beige-suave rounded-full cursor-pointer`}></button>
-        <button 
-        onClick={change}
-        name="3"        
-        className={`${activeIndex == 3 && "bg-marron-intenso"} w-4 h-4 bg-beige-suave rounded-full cursor-pointer`}></button>
+            ))
+          }  
+        </main> 
+          {
+            RenderButtons({activeIndex, numButtons: numMoves, handleChange})
+          }
       </div>
+
     </div>
+    
 );
 }
 

@@ -5,6 +5,8 @@ import TutorsComponent from "../components/process/Tutors"
 import { TestimonialsCarousel } from "../types/Testimonials"
 import VerticalTimeline from "../components/process/Timeline"
 import TestimonialsComponent from "../components/process/Testimonials"
+import { Suspense } from "react"
+import LoaderComponent from "../components/ui/LoaderComponent"
 
 const ProcessPage = () => {
 
@@ -73,14 +75,14 @@ const ProcessPage = () => {
     
 
     return ( 
-        <>
+        <Suspense fallback={<LoaderComponent color="dorado-clasico"/>}>
             <HeroComponentProcess/>
             <TopicsComponent/>
             <VerticalTimeline/>
             <TestimonialsComponent testimonials={testimonials_data}/>
             <TutorsComponent/>
             <QuestionsComponent/>
-        </>
+        </Suspense>
     )
 }
 

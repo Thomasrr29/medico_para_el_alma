@@ -48,7 +48,7 @@ const PillarsComponent = () => {
         }
         return prev;
       });
-    }, 800);
+    }, 500);
 
     return () => clearInterval(timer);
   }, []);

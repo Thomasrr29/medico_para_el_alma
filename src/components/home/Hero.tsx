@@ -2,7 +2,6 @@
 const HeroComponent = () => {
 
     return (
-
         <div className="relative 
         before:absolute before:inset-0 before:bg-[url('../src/assets/m-venter.jpg')] 
         before:opacity-40 before:content[''] before:-z-10 before:bg-cover before:bg-fixed 
@@ -14,7 +13,6 @@ const HeroComponent = () => {
                 <span className="bg-dorado-clasico py-2 px-4 rounded-lg text-white" >Sanación 👌 | Autoconocimiento ⛷️ | Servicio 🔁</span>
             </section>
         </div>
-        
     )
 }
 

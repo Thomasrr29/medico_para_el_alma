@@ -2,17 +2,23 @@ import { useState } from "react"
 
 interface LoaderComponentsProps {
     color: string  
-    texts: string[]
 }
 
 const LoaderComponent: React.FC<LoaderComponentsProps> = (props) => {
 
+    const texts_loader: string[] = [
+        "Es un camino largo que se hace fácil con la ayuda de Dios",
+        "Las dificultades nunca faltan pero la fé tampoco",
+        "Nosotros somos nuestro peor enemigo hasta que nos conocemos",
+        "Nosotros noluchamos con nuestras fuerzas, luchamos con las de el",
+        "El es nuestra guía y refugio"
+    ]
 
     const [index, setIndex] = useState(0)
 
-    function advancePhrase(props: LoaderComponentsProps){
+    function advancePhrase(){
 
-        if(index < props.texts.length){
+        if(index < texts_loader.length){
             setIndex(prev => prev + 1)
         } else {
             setIndex(0)
@@ -20,7 +26,7 @@ const LoaderComponent: React.FC<LoaderComponentsProps> = (props) => {
     }
 
     setInterval(() => (
-        advancePhrase(props)
+        advancePhrase()
     ), 1000)
 
 
@@ -31,7 +37,7 @@ const LoaderComponent: React.FC<LoaderComponentsProps> = (props) => {
                 <div className={`w-4 h-4 rounded-full bg-${props.color} animate-bounce [animation-delay:-.3s]`}></div>
                 <div className={`w-4 h-4 rounded-full bg-${props.color} animate-bounce [animation-delay:-.5s]`}></div>
             </div>
-            <p className={`text-${props.color} font-semibold text-lg`}>{props.texts[index]}</p>
+            <p className={`text-${props.color} font-semibold text-lg`}>{texts_loader[index]}</p>
         </div>
         
     )
