@@ -1,28 +1,34 @@
+import history from '@assets/history.jpg'
+import bible from '@assets/bible.jpg'
+import breaks from '@assets/breaks.jpg'
+
+
+
 const TopicsRender = () => {
 
     const topics = [
         {   
             id: 1,
             title: "Sanación Interior",
-            image: "../src/assets/break.jpg",
+            image: breaks,
             color: 'border-beige-suave text-beige-suave'
         },
         {
             id: 2,
             title: "Lectio Divina",
-            image: "../src/assets/bible.jpg",
+            image: bible,
             color: 'border-beige-suave text-beige-suave'
         },
         {
             id: 3,
             title: "Apologetica",
-            image: "../src/assets/bible.jpg",
+            image: bible,
             color: 'border-beige-suave text-beige-suave'
         },
         {
             id: 4,
             title: "Historia",
-            image: "../src/assets/history.jpg",
+            image: history,
             color: 'border-beige-suave text-beige-suave'
         }
     ]

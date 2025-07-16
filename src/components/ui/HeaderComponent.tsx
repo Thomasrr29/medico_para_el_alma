@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { FaTimes, FaBars, FaPhoneAlt} from "react-icons/fa"
+import logo from "@assets/logo.jpg"
 import { Link } from "react-router-dom"
 
 const HeaderComponent = () => {
@@ -14,7 +15,7 @@ const HeaderComponent = () => {
                 <div className="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0">
                     <Link to="/" className="flex items-center">
                         <img 
-                            src="./src/assets/logo.jpg" 
+                            src={logo}
                             alt="Logo" 
                             className="h-[80px] w-[80px] md:h-[100px] md:w-[100px] md:ml-10" 
                         />   
