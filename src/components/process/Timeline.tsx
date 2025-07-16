@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const VerticalTimeline = () => {
     const lastScrollY = useRef(0);

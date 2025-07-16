@@ -5,7 +5,6 @@ import TutorsComponent from "../components/process/Tutors"
 import { TestimonialsCarousel } from "../types/Testimonials"
 import VerticalTimeline from "../components/process/Timeline"
 import TestimonialsComponent from "../components/process/Testimonials"
-import PhoneIconComponent from "../components/ui/phoneIcon"
 
 const ProcessPage = () => {
 
