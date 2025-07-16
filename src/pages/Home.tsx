@@ -5,7 +5,6 @@ import {FaHeart, FaUsers, FaLandmark } from "react-icons/fa"
 import { MdSelfImprovement } from "react-icons/md"
 import AutorityComponent from "../components/home/autority"
 import PhraseComponent from "../components/ui/PhraseComponent"
-import PhoneIconComponent from "../components/ui/phoneIcon"
 
 const CallToActionComponent = lazy(() => import("../components/home/CallToAction"))
 const CommunityComponent = lazy(() => import("../components/home/statsSection"))
